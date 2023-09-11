@@ -67,6 +67,7 @@ def load_data_wrapper():
     code."""
     tr_d, va_d, te_d = load_data()
     training_inputs = [np.reshape(x, (784, 1)) for x in tr_d[0]]
+    print(type(training_inputs))
     training_results = [vectorized_result(y) for y in tr_d[1]]
     training_data = list(zip(training_inputs, training_results))
     validation_inputs = [np.reshape(x, (784, 1)) for x in va_d[0]]
